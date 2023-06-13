@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name">
+    </div><br>
+    <div>
+        <label for="age">Age</label>
+        <input type="text" id="age">
+    </div>
+    <button onclick="show()">Show</button>
+    <div>
+        <p id="show"></p>
+    </div>
+
+
+    <script>
+        function show(){
+            let name=document.getElementById("name").value;
+            let age=document.getElementById("age").value;
+            let show=document.getElementById("show");
+
+            if (age<18) {
+                show.innerHTML="MR. "+ name+ ", Your are a Chield";
+            }
+            if (age>18 && age<60) {
+                show.innerHTML="MR. "+ name+ ", Your are a Married";
+            }
+            if (age>60) {
+                show.innerHTML="MR. "+ name+ ", Your are a Old";
+            }
+            
+
+        }
+    </script>
+</body>
+</html>
